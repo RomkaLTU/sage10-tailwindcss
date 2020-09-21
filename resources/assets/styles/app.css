@@ -1,0 +1,10 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "_global.css";
+
+@import "partials/_header.css";
+@import "partials/_footer.css";
+
+@import "blocks/_hero.css";
