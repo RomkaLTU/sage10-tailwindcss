@@ -3,7 +3,8 @@
 1. Clone repo to your Theme directory
 2. Run composer install
 3. Run npm install && npm run build:production
-4. Run npm run start
+4. Change webpack.mix.js browserSync proxy value
+5. Run npm run start
 
 # [Sage](https://roots.io/sage/)
 
