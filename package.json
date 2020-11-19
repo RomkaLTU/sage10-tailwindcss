@@ -23,31 +23,32 @@
     "translate:js": "wp i18n make-json ./resources/languages --no-purge --pretty-print"
   },
   "devDependencies": {
-    "@tinypixelco/laravel-mix-wp-blocks": "^1.0.0",
-    "@wordpress/babel-preset-default": "^4.12.1",
-    "@wordpress/browserslist-config": "^2.6.0",
-    "@wordpress/dependency-extraction-webpack-plugin": "^2.5.0",
+    "@tinypixelco/laravel-mix-wp-blocks": "^1.1.0",
+    "@wordpress/babel-preset-default": "^4.19.0",
+    "@wordpress/browserslist-config": "^2.7.0",
+    "@wordpress/dependency-extraction-webpack-plugin": "^2.8.0",
     "babel-eslint": "^10.1.0",
-    "browser-sync": "^2.26.7",
-    "browser-sync-webpack-plugin": "^2.0.1",
+    "browser-sync": "^2.26.13",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "cross-env": "^7.0.2",
-    "eslint": "^6.8.0",
-    "eslint-plugin-import": "^2.20.2",
-    "laravel-mix": "^5.0.4",
+    "eslint": "^7.13.0",
+    "eslint-plugin-import": "^2.22.1",
+    "laravel-mix": "^5.0.9",
     "laravel-mix-copy-watched": "^2.2.4",
-    "laravel-mix-purgecss": "^5.0.0-rc.1",
+    "laravel-mix-purgecss": "^5.0.0",
     "npm-run-all": "^4.1",
-    "purgecss-with-wordpress": "^2.1.0",
+    "purgecss-with-wordpress": "^3.0.0",
     "rimraf": "^3.0.2",
-    "stylelint": "^13.3.3",
+    "stylelint": "^13.8.0",
     "stylelint-config-standard": "^20.0.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.2.0",
-    "autoprefixer": "^9.0.0",
+    "@tailwindcss/typography": "^0.3.1",
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.35",
     "postcss-custom-properties": "^9.0.0",
     "postcss-nested": "^4.0.0",
-    "tailwindcss": "^1.8.10"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1"
   }
 }

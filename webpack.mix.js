@@ -19,7 +19,7 @@ require('laravel-mix-copy-watched');
 
 mix.setPublicPath('./dist')
     .browserSync({
-        proxy: 'https://sage.test',
+        proxy: 'https://wmnt3.test',
         open: false,
         cors: true,
     });
