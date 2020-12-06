@@ -1,6 +1,6 @@
 ## Install
 
-1. Clone repo to your Theme directory
+1. Clone/Download repo to your Theme directory
 2. Run composer install
 3. Run npm install && npm run build:production
 4. Change webpack.mix.js browserSync proxy value
