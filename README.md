@@ -1,3 +1,6 @@
+<a href="https://medium.com/@romualdasromasdakeviius/tailwindcss-sage10-usage-example-7a51369fda6d"><img src="https://prodev.lt/social/images/tailwind_sage_wp_2.png" alt="WordPress Sage10 TailwindCSS" width="1280" height="460"></a>
+
+
 ## Install
 
 1. Clone/Download repo to your Theme directory
