@@ -21,26 +21,27 @@ mix.setPublicPath('./dist')
         cors: true,
     });
 
-mix.postCss('resources/assets/styles/app.css', 'styles', [
+mix
+  .options({processCssUrls: false,})
+  .postCss('resources/assets/styles/app.css', 'styles', [
     require('postcss-import'),
     require('tailwindcss'),
     require('postcss-nested'),
     require('postcss-custom-properties'),
     require('autoprefixer'),
-]);
+  ]);
 
-mix.js('resources/assets/scripts/app.js', 'scripts')
-   .js('resources/assets/scripts/customizer.js', 'scripts')
-   .blocks('resources/assets/scripts/editor.js', 'scripts')
-   .extract();
+mix
+  .js('resources/assets/scripts/app.js', 'scripts')
+  //.js('resources/assets/scripts/app.js', 'scripts').vue({version: 2}) // if using vuejs
+  .js('resources/assets/scripts/customizer.js', 'scripts')
+  .blocks('resources/assets/scripts/editor.js', 'scripts')
+  .extract();
 
-mix.copyWatched('resources/assets/images/**', 'dist/images')
-   .copyWatched('resources/assets/fonts/**', 'dist/fonts');
+mix
+  .copy('resources/assets/images', 'dist/images')
+  .copy('resources/assets/fonts', 'dist/fonts');
 
 mix.autoload({
   jquery: ['$', 'window.jQuery'],
-});
-
-mix.options({
-  processCssUrls: false,
 });
