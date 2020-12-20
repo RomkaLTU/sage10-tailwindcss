@@ -14,9 +14,6 @@ require('laravel-mix-copy-watched');
  |
  */
 
-// mix.setPublicPath('./dist')
-//    .browserSync('sage.test');
-
 mix.setPublicPath('./dist')
     .browserSync({
         proxy: 'https://sage.test',
@@ -24,14 +21,8 @@ mix.setPublicPath('./dist')
         cors: true,
     });
 
-// mix.sass('resources/assets/styles/app.scss', 'styles')
-//    .sass('resources/assets/styles/editor.scss', 'styles')
-//    .purgeCss({
-//      whitelist: require('purgecss-with-wordpress').whitelist,
-//      whitelistPatterns: require('purgecss-with-wordpress').whitelistPatterns,
-//    });
-
 mix.postCss('resources/assets/styles/app.css', 'styles', [
+    require('postcss-import'),
     require('tailwindcss'),
     require('postcss-nested'),
     require('postcss-custom-properties'),
