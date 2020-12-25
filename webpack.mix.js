@@ -39,8 +39,8 @@ mix
   .extract();
 
 mix
-  .copy('resources/assets/images', 'dist/images')
-  .copy('resources/assets/fonts', 'dist/fonts');
+  .copyWatched('resources/assets/images/**', 'dist/images')
+  .copyWatched('resources/assets/fonts/**', 'dist/fonts');
 
 mix.autoload({
   jquery: ['$', 'window.jQuery'],
