@@ -42,6 +42,8 @@ mix
   .copyWatched('resources/assets/images/**', 'dist/images')
   .copyWatched('resources/assets/fonts/**', 'dist/fonts');
 
+mix.version();
+
 mix.autoload({
   jquery: ['$', 'window.jQuery'],
 });
