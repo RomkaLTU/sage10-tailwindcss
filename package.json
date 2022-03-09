@@ -1,0 +1,54 @@
+{
+  "private": true,
+  "browserslist": [
+    "extends @wordpress/browserslist-config"
+  ],
+  "scripts": {
+    "build": "mix --production",
+    "prod": "mix --production",
+    "start": "mix watch",
+    "hot": "cross-env NODE_ENV=development run-s build mix:hot",
+    "mix": "webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "mix:hot": "webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "clean": "run-p clean:*",
+    "clean:dist": "rimraf dist",
+    "clean:cache": "rimraf storage/framework/cache/*.php storage/framework/cache/data/*.php",
+    "clean:views": "rimraf storage/framework/views/*.php",
+    "lint": "run-s -c lint:*",
+    "lint:scripts": "eslint resources/assets/scripts",
+    "lint:styles": "stylelint \"resources/assets/**/*.{vue,css,sass,scss,less}\"",
+    "test": "run-s -c lint",
+    "translate": "run-s -c translate:*",
+    "translate:pot": "wp i18n make-pot . ./resources/languages/sage.pot --ignore-domain --include=\"app,resources/assets,resources/views\"",
+    "translate:js": "wp i18n make-json ./resources/languages --no-purge --pretty-print"
+  },
+  "devDependencies": {
+    "@tinypixelco/laravel-mix-wp-blocks": "^1.1.0",
+    "@wordpress/babel-preset-default": "^6.5.1",
+    "@wordpress/browserslist-config": "^4.1.1",
+    "@wordpress/dependency-extraction-webpack-plugin": "^3.3.2",
+    "babel-eslint": "^10.1.0",
+    "browser-sync": "^2.27.7",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.10.0",
+    "eslint-plugin-import": "^2.25.4",
+    "laravel-mix": "^6.0.43",
+    "laravel-mix-copy-watched": "^2.3.1",
+    "laravel-mix-purgecss": "^6.0.0",
+    "npm-run-all": "^4.1",
+    "postcss": "^8.4.8",
+    "purgecss-with-wordpress": "^4.1.0",
+    "rimraf": "^3.0.2",
+    "stylelint": "^14.5.3",
+    "stylelint-config-standard": "^25.0.0",
+    "tailwindcss": "^3.0.23",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss-custom-properties": "^12.1.4",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.6"
+  }
+}
